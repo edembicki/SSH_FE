@@ -1,0 +1,17 @@
+@import './../../assets/styles/global';
+
+.login-form-button {
+  background-color: $theme-blue;
+  height: 40px;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.login-register-button {
+  border: 1px solid $theme-blue;
+  color: $theme-blue;
+  height: 40px;
+  width: 100%;
+  font-size: 14px;
+  font-weight: 700;
+}
