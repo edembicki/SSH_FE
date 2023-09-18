@@ -4,12 +4,14 @@ import Login from './views/login';
 import { Routes, Route, BrowserRouter } from "react-router-dom";
 import Register from './views/register';
 import Dashboard from './views/dashboard';
+import Tracker from './views/tracker';
 
 const App: React.FC = () => {
   const routes = (
     <BrowserRouter>
       <Routes>
         <Route path="/dashboard" element={<Dashboard/>} />
+        <Route path="/tracker" element={<Tracker/>} />
         <Route path="/register" element={<Register/>} />
         <Route path="/logout" element={<Login/>} />
         <Route path="/auth" element={<Login/>} />

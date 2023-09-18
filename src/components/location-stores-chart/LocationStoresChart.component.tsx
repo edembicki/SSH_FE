@@ -74,9 +74,9 @@ export default class Chart extends Component {
 
       let zoomOut = chart.chartContainer.createChild(am4core.ZoomOutButton);
       zoomOut.align = "right";
-      zoomOut.valign = "bottom";
-      zoomOut.margin(10, 10, 10, 10);
-      zoomOut.events.on("hit", function () {
+      zoomOut.valign = "top";
+      zoomOut.margin(20, 20, 20, 20);
+      zoomOut.events.on("hit", function() {
         if (currentSeries) {
           currentSeries.hide();
         }
@@ -85,6 +85,7 @@ export default class Chart extends Component {
         currentSeries = regionalSeries.US.series;
         currentSeries.show();
       });
+      zoomOut.hide();
 
       // Create map polygon series
       let polygonSeries = chart.series.push(new am4maps.MapPolygonSeries());
@@ -105,13 +106,12 @@ export default class Chart extends Component {
         loader.url = "https://s3-us-west-2.amazonaws.com/s.cdpn.io/t-160/TargetStores.json";
         loader.events.on("parseended", function(ev) {
           setupStores(ev.target.data);
-          createSeries("stores");
         });
         loader.load();
       }
 
       // Creates a series
-      function createSeries(heatfield: any) {
+      function createSeries(heatfield: string | undefined) {
         let series = chart.series.push(new am4maps.MapImageSeries());
         series.dataFields.value = heatfield;
 
@@ -147,9 +147,8 @@ export default class Chart extends Component {
           if (!data.target) {
             return;
           }
-          console.table(data.target)
           // Create actual series if it hasn't been yet created
-          if (!regionalSeries[data.target].series) {
+          if (regionalSeries[data.target] && regionalSeries[data.target].series) {
             regionalSeries[data.target].series = createSeries("count");
             regionalSeries[data.target].series.data = data.markerData;
           }
@@ -173,7 +172,9 @@ export default class Chart extends Component {
           zoomOut.show();
 
           // Show new targert series
-          currentSeries = regionalSeries[data.target].series;
+          if (regionalSeries[data.target] && regionalSeries[data.target].series) {
+            currentSeries = regionalSeries[data.target].series;
+          }
           currentSeries.show();
         });
 

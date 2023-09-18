@@ -60,4 +60,11 @@ code {
 	.ant-layout-content {
 		width: 100% !important;
 	}
+  .tracker-wrapper {
+    height: 450px !important;
+  }
+}
+
+.mapboxgl-control-container {
+  display: none !important;
 }
