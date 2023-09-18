@@ -63,7 +63,7 @@ export default class Chart extends Component {
         
       // Chart title
       let title = chart.titles.create();
-      title.text = "Map";
+      title.text = "Stores map";
       title.fontSize = 20;
       title.paddingBottom = 30;  
 
@@ -290,7 +290,7 @@ export default class Chart extends Component {
     render() {  
         return (  
             <div>  
-                <div id="MapChart" style={{ width: "100%", height: "300px" }}></div>  
+                <div id="MapChart" style={{ width: "100%", height: "400px" }}></div>  
             </div>  
         )  
     }  
