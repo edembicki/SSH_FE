@@ -1,0 +1,9 @@
+@import './../../assets/styles/global';
+
+.ant-form-item-row {
+  min-width: 400px !important;
+}
+
+.ant-form-item-control-input-content > *{
+  height: 40px !important;
+}

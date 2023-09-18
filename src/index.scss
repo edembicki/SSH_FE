@@ -18,25 +18,11 @@ code {
   background: #FDFBF0 !important;
 }
 
-.ant-layout-sider {
-  margin: 1rem !important;
-  border-radius: 12px;
-  border: 1px solid black !important;
-}
-
-.ant-layout-sider-children {
-  margin-top: 2rem !important;
-}
-
-.ant-layout-sider-trigger {
-  display: none;
-}
-
 .ant-menu-item {
-  margin: 3rem 10px !important;
-  padding-inline: 14px !important;
-  width: auto !important;
-  line-height: 45px !important; 
+  margin: 1rem !important;
+  display: flex !important;
+  flex-flow: column !important;
+  padding: 20px !important;
 }
 
 .ant-menu-item-selected {
@@ -52,11 +38,17 @@ code {
   background-color: $theme-blue !important;
 }
 
-.ant-layout-footer {
-  background: #FDFBF0 !important;
-  position: absolute !important;
-  bottom: 0px !important;
-  text-align: center !important;
-  width: 80% !important;
-  margin-left: 10%;
+.ant-layout-header {
+  height: auto;
+  flex-direction: row-reverse;
+  justify-content: center;
+}
+.ant-menu {
+  margin: 0 auto;
+}
+
+.ant-card {
+  -webkit-box-shadow: 10px 10px 29px -13px rgba(0,0,0,0.75);
+  -moz-box-shadow: 10px 10px 29px -13px rgba(0,0,0,0.75);
+  box-shadow: 10px 10px 29px -13px rgba(0,0,0,0.75);
 }
