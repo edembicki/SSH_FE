@@ -78,7 +78,7 @@ const Dashboard: React.FC = () => {
           </Col>
           <Col xs={24} sm={24} md={24} lg={12} xl={12}>            
             <Card
-              style={{ marginTop: 16, background: 'none' }}
+              style={{ marginTop: 16, background: 'none', padding: 0 }}
             >
               <LocationStoresChart />              
             </Card>               

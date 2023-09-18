@@ -132,6 +132,7 @@ export default class Chart extends Component {
         let label = template.createChild(am4core.Label);
         label.text = "{stores}";
         label.fill = am4core.color("#fff");
+        label.fontSize = 8;
         label.verticalCenter = "middle";
         label.horizontalCenter = "middle";
         label.nonScaling = true;
