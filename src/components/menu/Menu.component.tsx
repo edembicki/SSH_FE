@@ -1,11 +1,6 @@
 import { Menu, MenuProps } from "antd";
-import {
-  AppstoreOutlined,
-  CodepenOutlined,
-  DesktopOutlined,
-  UserOutlined
-} from '@ant-design/icons';
 import React from "react";
+import '@fortawesome/fontawesome-free/css/all.min.css';
 
 type MenuItem = Required<MenuProps>['items'][number];
 
@@ -24,10 +19,10 @@ function getItem(
 }
 
 const items: MenuItem[] = [
-  getItem('', '1', <AppstoreOutlined />),
-  getItem('', '2', <DesktopOutlined />),
-  getItem('', '3', <CodepenOutlined />),
-  getItem('', '4', <UserOutlined />),
+  getItem('', '1', <i className="fa-solid fa-ranking-star"></i>),
+  getItem('', '2', <i className="fa-solid fa-location-dot"></i>),
+  getItem('', '3', <i className="fa-solid fa-wallet"></i>),
+  getItem('', '4', <i className="fa-solid fa-user-gear"></i>),
 ];
 
 const MenuComponent: React.FC = () => {

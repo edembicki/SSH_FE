@@ -7,6 +7,11 @@
     "@amcharts/amcharts4-geodata": "^4.1.27",
     "@amcharts/amcharts5": "^5.4.6",
     "@amcharts/amcharts5-geodata": "^5.1.1",
+    "@fortawesome/fontawesome": "^1.1.8",
+    "@fortawesome/fontawesome-svg-core": "^6.4.2",
+    "@fortawesome/free-regular-svg-icons": "^6.4.2",
+    "@fortawesome/free-solid-svg-icons": "^6.4.2",
+    "@fortawesome/react-fontawesome": "^0.2.0",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
@@ -15,16 +20,25 @@
     "@types/react": "^18.2.21",
     "@types/react-dom": "^18.2.7",
     "antd": "^5.9.1",
+    "babel-preset-es2015": "^6.24.1",
     "node-sass": "^7.0.3",
     "react": "^18.2.0",
     "react-amcharts4": "^0.0.4",
     "react-dom": "^18.2.0",
     "react-helmet": "^6.1.0",
     "react-router-dom": "^6.16.0",
-    "react-script-tag": "^1.1.2",
     "react-scripts": "5.0.1",
     "typescript": "^4.9.5",
     "web-vitals": "^2.1.4"
+  },
+  "resolutions": {
+    "@babel/core": "7.19.6",
+    "@babel/generator": "7.19.6",
+    "@babel/compat-data": "7.19.4",
+    "@babel/helper-compilation-targets": "7.19.3",
+    "@babel/helper-create-class-features-plugin": "7.19.0",
+    "@babel/helper-module-transforms": "7.19.6",
+    "babel-loader": "8.2.5"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -51,6 +65,16 @@
     ]
   },
   "devDependencies": {
-    "@babel/plugin-proposal-private-property-in-object": "^7.21.11"
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+    "@expo/webpack-config": "^18.1.3",
+    "@fortawesome/fontawesome-free": "^6.4.2"
+  },
+  "overrides": {
+    "@babel/core": "7.19.6",
+    "@babel/generator": "7.19.6",
+    "@babel/compat-data": "7.19.4",
+    "@babel/helper-compilation-targets": "7.19.3",
+    "@babel/helper-create-class-features-plugin": "7.19.0",
+    "@babel/helper-module-transforms": "7.19.6"
   }
 }
