@@ -37,7 +37,7 @@ const Dashboard: React.FC = () => {
       >
         <MenuComponent />
       </Header>
-      <div className='tracker-wrapper' style={{height: 800}}>
+      <div className='tracker-wrapper' style={{height: 800, overflow: 'hidden'}}>
         <Tracker />
       </div>      
     </React.Fragment>

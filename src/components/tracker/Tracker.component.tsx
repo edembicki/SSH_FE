@@ -11,7 +11,6 @@ const MapChart = () => {
     }}
     bearing={0}
     pitch={65}
-    dragPan={false}
     mapStyle="mapbox://styles/mapbox/navigation-night-v1"
   >
     <Marker pitchAlignment='viewport' longitude={-93.27246798907177} latitude={44.98147496441713} anchor="bottom" style={{width: 100, height: 100}}>
