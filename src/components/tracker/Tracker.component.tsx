@@ -9,7 +9,7 @@ const MapChart = () => {
       latitude: 44.98147496441713,
       zoom: 13
     }}
-    bearing={1}
+    bearing={0}
     pitch={65}
     dragPan={false}
     mapStyle="mapbox://styles/mapbox/navigation-night-v1"
