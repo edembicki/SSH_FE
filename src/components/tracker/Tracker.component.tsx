@@ -4,10 +4,12 @@ const MapChart = () => {
   return <Map
     mapboxAccessToken="pk.eyJ1IjoiZGVtYmlja2kiLCJhIjoiY2xseWk3dGZoMHhnaTNybzlla2ZnZDhmZSJ9.uO-cN1AUQd40AAw5HIn8bg"
     initialViewState={{
-      longitude: -100,
-      latitude: 40,
-      zoom: 3.5
+      longitude: -93.27246798907177,
+      latitude: 44.98147496441713,
+      zoom: 13
     }}
+    bearing={1}
+    pitch={65}
     mapStyle="mapbox://styles/mapbox/navigation-night-v1"
   >
     <Marker longitude={-80} latitude={45} anchor="bottom" >
