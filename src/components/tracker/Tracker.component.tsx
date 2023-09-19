@@ -1,4 +1,5 @@
 import Map, { Marker } from 'react-map-gl';
+import 'mapbox-gl/dist/mapbox-gl.css';
 
 const MapChart = () => {
   return <Map
@@ -10,10 +11,80 @@ const MapChart = () => {
     }}
     bearing={1}
     pitch={65}
+    dragPan={false}
     mapStyle="mapbox://styles/mapbox/navigation-night-v1"
   >
-    <Marker longitude={-80} latitude={45} anchor="bottom" >
-      <svg height="24" version="1.1" width="24" xmlns="http://www.w3.org/2000/svg"><g transform="translate(0 -1028.4)"><path d="m12.031 1030.4c-3.8657 0-6.9998 3.1-6.9998 7 0 1.3 0.4017 2.6 1.0938 3.7 0.0334 0.1 0.059 0.1 0.0938 0.2l4.3432 8c0.204 0.6 0.782 1.1 1.438 1.1s1.202-0.5 1.406-1.1l4.844-8.7c0.499-1 0.781-2.1 0.781-3.2 0-3.9-3.134-7-7-7zm-0.031 3.9c1.933 0 3.5 1.6 3.5 3.5 0 2-1.567 3.5-3.5 3.5s-3.5-1.5-3.5-3.5c0-1.9 1.567-3.5 3.5-3.5z" fill="#c0392b"/><path d="m12.031 1.0312c-3.8657 0-6.9998 3.134-6.9998 7 0 1.383 0.4017 2.6648 1.0938 3.7498 0.0334 0.053 0.059 0.105 0.0938 0.157l4.3432 8.062c0.204 0.586 0.782 1.031 1.438 1.031s1.202-0.445 1.406-1.031l4.844-8.75c0.499-0.963 0.781-2.06 0.781-3.2188 0-3.866-3.134-7-7-7zm-0.031 3.9688c1.933 0 3.5 1.567 3.5 3.5s-1.567 3.5-3.5 3.5-3.5-1.567-3.5-3.5 1.567-3.5 3.5-3.5z" fill="#e74c3c" transform="translate(0 1028.4)"/></g></svg>
+    <Marker pitchAlignment='viewport' longitude={-93.27246798907177} latitude={44.98147496441713} anchor="bottom" style={{width: 100, height: 100}}>
+      <svg width="60px" height="60px" viewBox="-4 0 36 36" version="1.1" xmlns="http://www.w3.org/2000/svg">
+          <title>map-marker</title>
+          <desc>Created with Sketch.</desc>
+          <defs>
+      </defs>
+          <g id="Vivid.JS" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+              <g id="Vivid-Icons" transform="translate(-125.000000, -643.000000)">
+                  <g id="Icons" transform="translate(37.000000, 169.000000)">
+                      <g id="map-marker" transform="translate(78.000000, 468.000000)">
+                          <g transform="translate(10.000000, 6.000000)">
+                              <path d="M14,0 C21.732,0 28,5.641 28,12.6 C28,23.963 14,36 14,36 C14,36 0,24.064 0,12.6 C0,5.641 6.268,0 14,0 Z" id="Shape" fill="#FF6E6E">
+
+      </path>
+                              <circle id="Oval" fill="#0C0058" fill-rule="nonzero" cx="14" cy="14" r="7">
+
+      </circle>
+                          </g>
+                      </g>
+                  </g>
+              </g>
+          </g>
+      </svg>
+    </Marker>
+    <Marker pitchAlignment='viewport' longitude={-93.22246798907177} latitude={45} anchor="bottom" style={{width: 100, height: 100}}>
+      <svg width="60px" height="60px" viewBox="-4 0 36 36" version="1.1" xmlns="http://www.w3.org/2000/svg">
+          <title>map-marker</title>
+          <desc>Created with Sketch.</desc>
+          <defs>
+      </defs>
+          <g id="Vivid.JS" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+              <g id="Vivid-Icons" transform="translate(-125.000000, -643.000000)">
+                  <g id="Icons" transform="translate(37.000000, 169.000000)">
+                      <g id="map-marker" transform="translate(78.000000, 468.000000)">
+                          <g transform="translate(10.000000, 6.000000)">
+                              <path d="M14,0 C21.732,0 28,5.641 28,12.6 C28,23.963 14,36 14,36 C14,36 0,24.064 0,12.6 C0,5.641 6.268,0 14,0 Z" id="Shape" fill="#FF6E6E">
+
+      </path>
+                              <circle id="Oval" fill="#0C0058" fill-rule="nonzero" cx="14" cy="14" r="7">
+
+      </circle>
+                          </g>
+                      </g>
+                  </g>
+              </g>
+          </g>
+      </svg>
+    </Marker>
+    <Marker pitchAlignment='viewport' longitude={-93.36246798907177} latitude={45.100} anchor="bottom" style={{width: 100, height: 100}}>
+      <svg width="60px" height="60px" viewBox="-4 0 36 36" version="1.1" xmlns="http://www.w3.org/2000/svg">
+          <title>map-marker</title>
+          <desc>Created with Sketch.</desc>
+          <defs>
+      </defs>
+          <g id="Vivid.JS" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+              <g id="Vivid-Icons" transform="translate(-125.000000, -643.000000)">
+                  <g id="Icons" transform="translate(37.000000, 169.000000)">
+                      <g id="map-marker" transform="translate(78.000000, 468.000000)">
+                          <g transform="translate(10.000000, 6.000000)">
+                              <path d="M14,0 C21.732,0 28,5.641 28,12.6 C28,23.963 14,36 14,36 C14,36 0,24.064 0,12.6 C0,5.641 6.268,0 14,0 Z" id="Shape" fill="#FF6E6E">
+
+      </path>
+                              <circle id="Oval" fill="#0C0058" fill-rule="nonzero" cx="14" cy="14" r="7">
+
+      </circle>
+                          </g>
+                      </g>
+                  </g>
+              </g>
+          </g>
+      </svg>
     </Marker>
   </Map>;
 };
