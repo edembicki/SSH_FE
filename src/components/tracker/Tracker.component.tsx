@@ -11,7 +11,7 @@ const MapChart = () => {
     }}
     bearing={0}
     pitch={65}
-    mapStyle="mapbox://styles/mapbox/navigation-night-v1"
+    mapStyle="mapbox://styles/mapbox/satellite-streets-v12"
   >
     <Marker pitchAlignment='viewport' longitude={-93.27246798907177} latitude={44.98147496441713} anchor="bottom" style={{width: 100, height: 100}}>
       <svg width="60px" height="60px" viewBox="-4 0 36 36" version="1.1" xmlns="http://www.w3.org/2000/svg">
