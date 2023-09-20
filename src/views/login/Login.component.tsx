@@ -3,9 +3,11 @@ import { Typography } from "antd";
 import './Login.scss'
 import { Content, Footer } from "antd/es/layout/layout";
 import React from "react";
+import { useNavigate } from "react-router-dom";
 const { Title } = Typography;
 
 const LoginForm = () => {
+  const navigate = useNavigate()
   const onFinish = (values: { remember: any; username: string; password: string; }) => {
     console.log("Received values of form: ", values);
     if (values.remember) {
@@ -24,6 +26,9 @@ const LoginForm = () => {
     console.log("Handle registration logic here");
   };
 
+  const handleSubmit = () => {
+    navigate('/dashboard')
+  }
   return (
     <React.Fragment>
       <Content style={{ margin: '0 16px' }}>  
@@ -95,6 +100,7 @@ const LoginForm = () => {
                 htmlType="submit"
                 className="login-form-button"
                 block
+                onClick={handleSubmit}
                 >
                 Login
                 </Button>

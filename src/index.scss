@@ -7,6 +7,10 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  scrollbar-width: none !important;
+}
+body::-webkit-scrollbar {
+  display: none; 
 }
 
 code {
@@ -67,4 +71,9 @@ code {
 
 .mapboxgl-control-container {
   display: none !important;
+}
+
+.mapboxgl-canvas {
+  width: 100% !important;
+  height: 100% !important;
 }
