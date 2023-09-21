@@ -7,10 +7,12 @@ const MapChart = () => {
     initialViewState={{
       longitude: -93.27246798907177,
       latitude: 44.98147496441713,
-      zoom: 13
+      zoom: 13,
+      
     }}
     bearing={0}
     pitch={65}
+    maxBounds={[-96, 44, -93, 45]}
     mapStyle="mapbox://styles/mapbox/satellite-streets-v12"
   >
     <Marker pitchAlignment='viewport' longitude={-93.27246798907177} latitude={44.98147496441713} anchor="bottom" style={{width: 100, height: 100}}>
