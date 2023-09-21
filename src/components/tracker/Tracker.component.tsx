@@ -21,7 +21,7 @@ const MapChart = () => {
           <desc>Created with Sketch.</desc>
           <defs>
       </defs>
-          <g id="Vivid.JS" stroke="none" stroke-width="1" fill="none" fillRule="evenodd">
+          <g id="Vivid.JS" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
               <g id="Vivid-Icons" transform="translate(-125.000000, -643.000000)">
                   <g id="Icons" transform="translate(37.000000, 169.000000)">
                       <g id="map-marker" transform="translate(78.000000, 468.000000)">
@@ -45,7 +45,7 @@ const MapChart = () => {
           <desc>Created with Sketch.</desc>
           <defs>
       </defs>
-          <g id="Vivid.JS" stroke="none" stroke-width="1" fill="none" fillRule="evenodd">
+          <g id="Vivid.JS" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
               <g id="Vivid-Icons" transform="translate(-125.000000, -643.000000)">
                   <g id="Icons" transform="translate(37.000000, 169.000000)">
                       <g id="map-marker" transform="translate(78.000000, 468.000000)">
@@ -69,7 +69,7 @@ const MapChart = () => {
           <desc>Created with Sketch.</desc>
           <defs>
       </defs>
-          <g id="Vivid.JS" stroke="none" stroke-width="1" fill="none" fillRule="evenodd">
+          <g id="Vivid.JS" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
               <g id="Vivid-Icons" transform="translate(-125.000000, -643.000000)">
                   <g id="Icons" transform="translate(37.000000, 169.000000)">
                       <g id="map-marker" transform="translate(78.000000, 468.000000)">

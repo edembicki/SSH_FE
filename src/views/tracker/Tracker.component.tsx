@@ -1,7 +1,6 @@
 import React from 'react';
-import { Breadcrumb } from "antd";
 import './Tracker.scss';
-import { Content, Header } from 'antd/es/layout/layout';
+import { Header } from 'antd/es/layout/layout';
 import MenuComponent from '../../components/menu/Menu.component';
 import Tracker from '../../components/tracker';
 

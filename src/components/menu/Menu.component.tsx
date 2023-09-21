@@ -1,5 +1,5 @@
-import { Menu, MenuProps } from "antd";
-import React from "react";
+import { Menu } from "antd";
+import React, { useState } from "react";
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import { useNavigate } from "react-router-dom";
 
@@ -36,17 +36,23 @@ const items: MenuItem[] = [
   getItem('', '4', '/profile', <i className="fa-solid fa-user-gear"></i>),
 ];
 
+
+
 const MenuComponent: React.FC = () => {
+  const url = window.location.pathname
+  const currentKey = items.find(item => item?.path === url)
+  const [selectedItem, setSelectedItem] = useState<string[]>([String(currentKey?.key)])
   const navigate = useNavigate()
-  const handleOnClick = (e: any) => {
+  const handleOnClick = (e: any) => {    
     const navigateTo = items.find(item => item?.key === e.key)
     if (navigateTo && navigateTo.path) {
-      navigate(navigateTo.path); // Uncomment this line to navigate to the clicked route.
-    }
-    //navigate(e)
+      navigate(navigateTo.path)      
+    }    
+    setSelectedItem([e.key])
   }
+
   return (
-    <Menu theme="dark" defaultSelectedKeys={['1']} mode="horizontal" items={items} onClick={(e) => 
+    <Menu theme="dark" defaultSelectedKeys={selectedItem} selectedKeys={selectedItem} mode="horizontal" items={items} onClick={(e) => 
         handleOnClick(e)}/>
   )
 }
