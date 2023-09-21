@@ -72,11 +72,11 @@ const Dashboard: React.FC = () => {
               <p>Last coins earned<br /> <small>KFC - store 408 8th ave</small></p>
             </Card>
           </Col>
-          <Col xs={2} lg={2} style={{borderRight: '4px solid #80808024'}}>
+          <Col xs={1} lg={1} style={{borderRight: '4px solid #80808024'}}>
           </Col>
-          <Col xs={2} lg={2}>
+          <Col xs={1} lg={1}>
           </Col>
-          <Col xs={24} sm={24} md={24} lg={12} xl={12}>            
+          <Col xs={24} sm={24} md={24} lg={14} xl={14}>            
             <Card
               style={{ marginTop: 16, background: 'none', padding: 0 }}
             >

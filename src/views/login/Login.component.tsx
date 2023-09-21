@@ -21,9 +21,8 @@ const LoginForm = () => {
     console.log("Handle password recovery logic here");
   };
 
-  const handleRegister = (e: { preventDefault: () => void; }) => {
-    e.preventDefault();
-    console.log("Handle registration logic here");
+  const handleRegister = () => {
+    navigate('/register')
   };
 
   const handleSubmit = () => {
@@ -109,9 +108,7 @@ const LoginForm = () => {
                 <Divider dashed>OR</Divider>
             </Form.Item>
             <Form.Item>
-                <a href="/" onClick={handleRegister}>
-                <Button className="login-register-button">Create an account</Button>
-                </a>
+              <Button className="login-register-button" onClick={handleRegister}>Create an account</Button>
             </Form.Item>
             </Form>
         </Card>

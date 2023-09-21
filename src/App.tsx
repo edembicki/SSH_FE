@@ -5,6 +5,7 @@ import { Routes, Route, BrowserRouter } from "react-router-dom";
 import Register from './views/register';
 import Dashboard from './views/dashboard';
 import Tracker from './views/tracker';
+import Wallet from './views/wallet';
 
 const App: React.FC = () => {
   const routes = (
@@ -12,6 +13,7 @@ const App: React.FC = () => {
       <Routes>
         <Route path="/dashboard" element={<Dashboard/>} />
         <Route path="/tracker" element={<Tracker/>} />
+        <Route path="/wallet" element={<Wallet/>} />
         <Route path="/register" element={<Register/>} />
         <Route path="/logout" element={<Login/>} />
         <Route path="/auth" element={<Login/>} />
