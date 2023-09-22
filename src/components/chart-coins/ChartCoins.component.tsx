@@ -4,7 +4,7 @@ import * as am4charts from "@amcharts/amcharts4/charts";
 import am4themes_animated from "@amcharts/amcharts4/themes/animated";  
 import Data from './Data'  
   
-export default class Chart extends Component {
+export default class ChartCoins extends Component {
     chart: any;  
   
     componentDidMount() {  
@@ -17,7 +17,7 @@ export default class Chart extends Component {
       // Chart title
       let title = chart.titles.create();
       title.text = "Coin collection";
-      title.fontSize = 20;
+      title.fontSize = 30;
       title.paddingBottom = 30;  
 
       let dateAxis = chart.xAxes.push(new am4charts.DateAxis());
@@ -34,7 +34,7 @@ export default class Chart extends Component {
       series.tensionX = 0.8;
       series.strokeWidth = 3;
       series.fill = am4core.color("#4989C3");
-      series.fillOpacity = 0.5;
+      series.fillOpacity = 0.2;
 
       let bullet = series.bullets.push(new am4charts.CircleBullet());
       bullet.circle.fill = am4core.color("#fff");
@@ -69,7 +69,7 @@ export default class Chart extends Component {
     render() {  
         return (  
             <div>  
-                <div id="SalesChart" style={{ width: "100%", height: "400px" }}></div>  
+                <div id="SalesChart" style={{ width: "100%", height: "290px" }}></div>  
             </div>  
         )  
     }  

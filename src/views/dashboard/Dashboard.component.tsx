@@ -1,5 +1,5 @@
 import React from 'react';
-import { Breadcrumb } from "antd";
+import { Avatar, Breadcrumb, List, Timeline } from "antd";
 import {
   Card,
   Col,
@@ -9,6 +9,28 @@ import './Dashboard.scss';
 import { Content, Header } from 'antd/es/layout/layout';
 import MenuComponent from '../../components/menu/Menu.component';
 import LocationStoresChart from '../../components/location-stores-chart';
+
+const dataList = [
+  {
+    title: 'Ant Design Title 1',
+  },
+  {
+    title: 'Ant Design Title 2',
+  },
+  {
+    title: 'Ant Design Title 3',
+  },
+  {
+    title: 'Ant Design Title 4',
+  },
+  {
+    title: 'Ant Design Title 4',
+  },
+  {
+    title: 'Ant Design Title 4',
+  }  
+];
+
 
 const Dashboard: React.FC = () => {
   return (
@@ -53,32 +75,56 @@ const Dashboard: React.FC = () => {
         <Breadcrumb style={{ margin: '16px', fontSize: '30px', fontWeight: 900 }}>
           <Breadcrumb.Item>Dashboard</Breadcrumb.Item>
         </Breadcrumb>
-        <Row gutter={48}>
-          <Col xs={24} sm={24} md={24} lg={4} xl={4}>
+        <Row gutter={18}>
+          <Col xs={24} sm={24} md={24} lg={5} xl={5}>
             <Card
-              style={{ marginTop: 16, borderTop: '10px solid #4989C3' }}
+              style={{ marginTop: 16, minHeight: 750 }}
             >
-              <p style={{padding: '6px', background: '#F2EED0', borderRadius: '10px', textAlign: 'center', width: '5rem'}}>Coins</p>
-              <p style={{fontSize: 20, margin: 0, fontWeight: 900}}>$1.000</p>
+              <p style={{padding: '6px', background: 'rgb(39 160 170)', borderRadius: '10px', textAlign: 'center', fontSize: '20px', color: 'white', width: 200}}>Coins</p>
+              <p style={{fontSize: 40, margin: 0, fontWeight: 900}}>$1.000</p>
               <p>Last coins earned<br /> <small>KFC - store 408 8th ave</small></p>
+              <br></br>
+              <br></br>
+              <List
+                itemLayout="horizontal"
+                dataSource={dataList}
+                renderItem={(item, index) => (
+                  <List.Item>
+                    <i className="fa-solid fa-plus" style={{color: 'green', marginRight: '1rem'}}></i>
+                    <List.Item.Meta
+                      description="Coins earned - KFC - store 408 8th ave"
+                    />
+                  </List.Item>
+                )}
+              />
             </Card>
           </Col>
-          <Col xs={24} sm={24} md={24} lg={4} xl={4}>
+          <Col xs={24} sm={24} md={24} lg={5} xl={5}>
             <Card
-              style={{ marginTop: 16, borderTop: '10px solid #4989C3' }}
+              style={{ marginTop: 16, minHeight: 750 }}
             >
-              <p style={{padding: '6px', background: '#F2EED0', borderRadius: '10px', textAlign: 'center', width: '5rem'}}>Tickets</p>
-              <p style={{fontSize: 20, margin: 0, fontWeight: 900}}>$1.000</p>
-              <p>Last coins earned<br /> <small>KFC - store 408 8th ave</small></p>
+              <p style={{padding: '6px', background: 'rgb(39 160 170)', borderRadius: '10px', textAlign: 'center', fontSize: '20px', color: 'white', width: 200}}>Coupons</p>
+              <p style={{fontSize: 40, margin: 0, fontWeight: 900}}>5</p>
+              <p>Last coupon used<br /> <small>KFC - store 408 8th ave</small></p>
+              <br></br>
+              <br></br>
+              <List
+                itemLayout="horizontal"
+                dataSource={dataList}
+                renderItem={(item, index) => (
+                  <List.Item>
+                    <i className="fa-solid fa-minus" style={{color: 'red', marginRight: '1rem'}}></i>
+                    <List.Item.Meta
+                      description="Coupon used - KFC - store 408 8th ave"
+                    />
+                  </List.Item>
+                )}
+              />
             </Card>
-          </Col>
-          <Col xs={1} lg={1} style={{borderRight: '4px solid #80808024'}}>
-          </Col>
-          <Col xs={1} lg={1}>
           </Col>
           <Col xs={24} sm={24} md={24} lg={14} xl={14}>            
             <Card
-              style={{ marginTop: 16, background: 'none', padding: 0 }}
+              style={{ marginTop: 16, padding: 0 }}
             >
               <LocationStoresChart />              
             </Card>               

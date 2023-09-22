@@ -215,7 +215,7 @@ export default class Chart extends Component {
     render() {  
         return (  
             <div>  
-                <div id="MapChart" style={{ width: "100%", height: "400px" }}></div>  
+                <div id="MapChart" style={{ width: "100%", height: "700px" }}></div>  
             </div>  
         )  
     }  

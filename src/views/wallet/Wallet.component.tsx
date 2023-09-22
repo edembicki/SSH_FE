@@ -1,11 +1,43 @@
-import React from 'react';
+/* eslint-disable jsx-a11y/alt-text */
+import React, { useState } from 'react';
 import './Wallet.scss';
-import { Header } from 'antd/es/layout/layout';
+import { Content, Header } from 'antd/es/layout/layout';
 import MenuComponent from '../../components/menu/Menu.component';
-import Chart from '../../components/chart';
+import ChartCoins from '../../components/chart-coins';
+import { Breadcrumb, Row, Col, Card, InputNumber, Select, Button, Modal } from 'antd';
+import Calendar from '../../components/datePicker';
+import ChartTickets from '../../components/chart-tickets';
 
+const { Option } = Select;
 
+const selectBefore = (
+  <Select defaultValue="add" style={{ width: 60 }}>
+    <Option value="add">+</Option>
+    <Option value="minus">-</Option>
+  </Select>
+);
+const selectAfter = (
+  <Select defaultValue="USD" style={{ width: 60 }}>
+    <Option value="USD">$</Option>
+    <Option value="EUR">€</Option>
+    <Option value="GBP">£</Option>
+    <Option value="CNY">¥</Option>
+  </Select>
+);
 const Wallet: React.FC = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const showModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const handleOk = () => {
+    setIsModalOpen(false);
+  };
+
+  const handleCancel = () => {
+    setIsModalOpen(false);
+  };
   return (
     <React.Fragment>
       <Header>
@@ -38,7 +70,83 @@ const Wallet: React.FC = () => {
         <MenuComponent />
       </Header>
       <div className='tracker-wrapper' style={{minHeight: 1100, height: 1100, overflow: 'hidden'}}>
-        <Chart />   
+        <Content
+          style={{
+            padding: 24,
+            minHeight: 600,
+            width: '80%',
+            margin: '0 auto'
+          }}
+        >
+          <Breadcrumb style={{ margin: '16px', fontSize: '30px', fontWeight: 900 }}>
+            <Breadcrumb.Item>Wallet</Breadcrumb.Item>
+          </Breadcrumb>
+          <Row gutter={8}>
+            <Col xs={24} sm={24} md={24} lg={8} xl={8}>
+              <Col xs={24} sm={24} md={24} lg={24} xl={24}>
+                <Card
+                  style={{ marginTop: 16, display: 'flex', flexDirection: 'column' }}
+                >
+                  <img width={100} src='https://zenix.dexignzone.com/react/demo/static/media/btc1.236bc4505212e45916105a3fb6d82b97.svg' />
+                  <div style={{float: 'right', display: 'flex', flexDirection: 'column', alignItems: 'end', marginRight: '2rem'}}>
+                    <p style={{fontSize: 30, margin: 0, fontWeight: 900}}>Coins</p>
+                    <p style={{fontSize: 30, margin: 0, fontWeight: 900}}>$1.000</p>
+                  </div>
+                  <p style={{display: 'block'}}>Dash is an open source cryptocurrency. It is an altcoin that was forked from the Bitcoin protocol. It is also a decentralized autonomous organization (DAO) run by a subset of its users, which are called "masternodes". The currency permits transactions that can be untraceable. Dash is an open source cryptocurrency. It is an altcoin that was forked from the Bitcoin protocol. It is also a decentralized autonomous organization (DAO) run by a subset of its users, which are called "masternodes". The currency permits transactions that can be untraceable.</p>
+                  <Button type="primary" onClick={showModal}>
+                    Use coins
+                  </Button>
+                  <Modal title="Basic Modal" open={isModalOpen} onOk={handleOk} onCancel={handleCancel}>
+                    <p>Some contents...</p>
+                    <p>Some contents...</p>
+                    <p>Some contents...</p>
+                  </Modal>
+                </Card>
+              </Col>
+              <Col xs={24} sm={24} md={24} lg={24} xl={24}>
+                <Card
+                  style={{ marginTop: 16, display: 'flex', flexDirection: 'column' }}
+                >
+                  <img width={100} src='https://uxwing.com/wp-content/themes/uxwing/download/e-commerce-currency-shopping/coupon-discount-icon.png' />
+                  <div style={{float: 'right', display: 'flex', flexDirection: 'column', alignItems: 'end', marginRight: '2rem'}}>
+                    <p style={{fontSize: 30, margin: 0, fontWeight: 900}}>Coupons</p>
+                    <p style={{fontSize: 30, margin: 0, fontWeight: 900}}>5</p>
+                  </div>
+                  <p style={{display: 'block'}}>Dash is an open source cryptocurrency. It is an altcoin that was forked from the Bitcoin protocol. It is also a decentralized autonomous organization (DAO) run by a subset of its users, which are called "masternodes". The currency permits transactions that can be untraceable. Dash is an open source cryptocurrency. It is an altcoin that was forked from the Bitcoin protocol. It is also a decentralized autonomous organization (DAO) run by a subset of its users, which are called "masternodes". The currency permits transactions that can be untraceable.</p>
+                  <Button type="primary" onClick={showModal}>
+                    Use coupons
+                  </Button>
+                  <Modal title="Basic Modal" open={isModalOpen} onOk={handleOk} onCancel={handleCancel}>
+                    <p>Some contents...</p>
+                    <p>Some contents...</p>
+                    <p>Some contents...</p>
+                  </Modal>
+                </Card>
+              </Col>
+            </Col>
+            <Col xs={24} sm={24} md={24} lg={16} xl={16}> 
+              <Col xs={24} sm={24} md={24} lg={24} xl={24}>            
+                <Card
+                  style={{ marginTop: 16, padding: 0 }}
+                >
+                  <InputNumber style={{float: 'right'}} addonBefore={selectBefore} addonAfter={selectAfter} defaultValue={100} />
+                  <Calendar />
+                  <ChartCoins />           
+                </Card>               
+              </Col>
+              <Col xs={24} sm={24} md={24} lg={24} xl={24}>            
+                <Card
+                  style={{ marginTop: 16, padding: 0 }}
+                >
+                  <InputNumber style={{float: 'right'}} addonBefore={selectBefore} addonAfter={selectAfter} defaultValue={100} />
+                  <Calendar />    
+                  <ChartTickets />         
+                </Card>               
+              </Col>
+            </Col>
+          </Row>
+        </Content>
+         
       </div>      
     </React.Fragment>
   );
