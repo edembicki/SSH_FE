@@ -3,7 +3,7 @@ import React from 'react';
 import './HotspotQR.scss';
 import { Content, Header } from 'antd/es/layout/layout';
 import MenuComponent from '../../components/menu/Menu.component';
-import { Breadcrumb, Button } from 'antd';
+import { Breadcrumb } from 'antd';
 import QRCodeReader from '../../components/qr-code-reader';
 
 const HotspotQR: React.FC = () => {

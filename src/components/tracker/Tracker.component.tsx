@@ -1,18 +1,36 @@
 import Map, { Marker } from 'react-map-gl';
 import 'mapbox-gl/dist/mapbox-gl.css';
+import { useEffect, useState } from 'react';
 
 const MapChart = () => {
+
+  const [currentLatitude, setCurrentLatitude] = useState(44.98147496441713)
+  const [currentLongitude, setCurrentLongitude] = useState(-93.27246798907177)
+  useEffect(() => {
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(success);
+    } 
+
+    function success(position: { coords: { latitude: any; longitude: any; }; }) {
+      const latitude = position.coords.latitude;
+      const longitude = position.coords.longitude;
+      setCurrentLatitude(latitude)
+      setCurrentLongitude(longitude)
+    }
+  }, []);
+
+  console.log(currentLongitude, currentLatitude)
   return <Map
     mapboxAccessToken="pk.eyJ1IjoiZGVtYmlja2kiLCJhIjoiY2xseWk3dGZoMHhnaTNybzlla2ZnZDhmZSJ9.uO-cN1AUQd40AAw5HIn8bg"
     initialViewState={{
-      longitude: -93.27246798907177,
-      latitude: 44.98147496441713,
+      longitude: currentLongitude,
+      latitude: currentLatitude,
       zoom: 13,
       
     }}
     bearing={0}
     pitch={65}
-    maxBounds={[-100, 40, -90, 50]}
+    //maxBounds={[-100, 40, -90, 50]}
     mapStyle="mapbox://styles/mapbox/navigation-night-v1"
   >
     <Marker pitchAlignment='viewport' longitude={-93.27246798907177} latitude={44.98147496441713} anchor="bottom" style={{width: 100, height: 100}}>
