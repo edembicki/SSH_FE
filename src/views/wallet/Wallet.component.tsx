@@ -69,7 +69,7 @@ const Wallet: React.FC = () => {
       >
         <MenuComponent />
       </Header>
-      <div className='tracker-wrapper' style={{minHeight: 1100, height: 1100, overflow: 'hidden'}}>
+      <div className='tracker-wrapper' style={{minHeight: 1100, height: 1100}}>
         <Content
           style={{
             padding: 24,
@@ -85,14 +85,14 @@ const Wallet: React.FC = () => {
             <Col xs={24} sm={24} md={24} lg={8} xl={8}>
               <Col xs={24} sm={24} md={24} lg={24} xl={24}>
                 <Card
-                  style={{ marginTop: 16, display: 'flex', flexDirection: 'column' }}
+                  style={{ marginTop: 16, display: 'flex', flexDirection: 'column', minHeight: 272 }}
                 >
-                  <img width={100} src='https://zenix.dexignzone.com/react/demo/static/media/btc1.236bc4505212e45916105a3fb6d82b97.svg' />
+                  <img width={70} src='https://zenix.dexignzone.com/react/demo/static/media/btc1.236bc4505212e45916105a3fb6d82b97.svg' />
                   <div style={{float: 'right', display: 'flex', flexDirection: 'column', alignItems: 'end', marginRight: '2rem'}}>
-                    <p style={{fontSize: 30, margin: 0, fontWeight: 900}}>Coins</p>
-                    <p style={{fontSize: 30, margin: 0, fontWeight: 900}}>$1.000</p>
+                    <p style={{fontSize: 20, margin: 0, fontWeight: 900}}>Coins</p>
+                    <p style={{fontSize: 20, margin: 0, fontWeight: 900}}>$1.000</p>
                   </div>
-                  <p style={{display: 'block'}}>Dash is an open source cryptocurrency. It is an altcoin that was forked from the Bitcoin protocol. It is also a decentralized autonomous organization (DAO) run by a subset of its users, which are called "masternodes". The currency permits transactions that can be untraceable. Dash is an open source cryptocurrency. It is an altcoin that was forked from the Bitcoin protocol. It is also a decentralized autonomous organization (DAO) run by a subset of its users, which are called "masternodes". The currency permits transactions that can be untraceable.</p>
+                  <p style={{display: 'block'}}>Dash is an open source cryptocurrency. It is an altcoin that was forked from the Bitcoin protocol. It is also a decentralized autonomous organization (DAO) run by a subset of its users, which are called "masternodes".</p>
                   <Button type="primary" onClick={showModal}>
                     Use coins
                   </Button>
@@ -105,14 +105,14 @@ const Wallet: React.FC = () => {
               </Col>
               <Col xs={24} sm={24} md={24} lg={24} xl={24}>
                 <Card
-                  style={{ marginTop: 16, display: 'flex', flexDirection: 'column' }}
+                  style={{ marginTop: 16, display: 'flex', flexDirection: 'column', minHeight: 272 }}
                 >
-                  <img width={100} src='https://uxwing.com/wp-content/themes/uxwing/download/e-commerce-currency-shopping/coupon-discount-icon.png' />
+                  <img width={70} src='https://uxwing.com/wp-content/themes/uxwing/download/e-commerce-currency-shopping/coupon-discount-icon.png' />
                   <div style={{float: 'right', display: 'flex', flexDirection: 'column', alignItems: 'end', marginRight: '2rem'}}>
-                    <p style={{fontSize: 30, margin: 0, fontWeight: 900}}>Coupons</p>
-                    <p style={{fontSize: 30, margin: 0, fontWeight: 900}}>5</p>
+                    <p style={{fontSize: 20, margin: 0, fontWeight: 900}}>Coupons</p>
+                    <p style={{fontSize: 20, margin: 0, fontWeight: 900}}>5</p>
                   </div>
-                  <p style={{display: 'block'}}>Dash is an open source cryptocurrency. It is an altcoin that was forked from the Bitcoin protocol. It is also a decentralized autonomous organization (DAO) run by a subset of its users, which are called "masternodes". The currency permits transactions that can be untraceable. Dash is an open source cryptocurrency. It is an altcoin that was forked from the Bitcoin protocol. It is also a decentralized autonomous organization (DAO) run by a subset of its users, which are called "masternodes". The currency permits transactions that can be untraceable.</p>
+                  <p style={{display: 'block'}}>Dash is an open source cryptocurrency. It is an altcoin that was forked from the Bitcoin protocol. It is also a decentralized autonomous organization (DAO) run by a subset of its users, which are called "masternodes".</p>
                   <Button type="primary" onClick={showModal}>
                     Use coupons
                   </Button>

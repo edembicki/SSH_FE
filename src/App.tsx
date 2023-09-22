@@ -26,7 +26,7 @@ const App: React.FC = () => {
 
   return (
     <div>
-      <Layout style={{ minHeight: '100vh', overflow: 'hidden' }}>
+      <Layout style={{ minHeight: '100vh' }}>
         <Layout>                
           {routes}
         </Layout>

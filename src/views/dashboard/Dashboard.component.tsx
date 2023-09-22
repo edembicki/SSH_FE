@@ -1,5 +1,5 @@
 import React from 'react';
-import { Avatar, Breadcrumb, List, Timeline } from "antd";
+import { Breadcrumb, List } from "antd";
 import {
   Card,
   Col,
@@ -20,15 +20,6 @@ const dataList = [
   {
     title: 'Ant Design Title 3',
   },
-  {
-    title: 'Ant Design Title 4',
-  },
-  {
-    title: 'Ant Design Title 4',
-  },
-  {
-    title: 'Ant Design Title 4',
-  }  
 ];
 
 
@@ -78,10 +69,10 @@ const Dashboard: React.FC = () => {
         <Row gutter={18}>
           <Col xs={24} sm={24} md={24} lg={5} xl={5}>
             <Card
-              style={{ marginTop: 16, minHeight: 750 }}
+              style={{ marginTop: 16 }}
             >
               <p style={{padding: '6px', background: 'rgb(39 160 170)', borderRadius: '10px', textAlign: 'center', fontSize: '20px', color: 'white', width: 200}}>Coins</p>
-              <p style={{fontSize: 40, margin: 0, fontWeight: 900}}>$1.000</p>
+              <p style={{fontSize: 30, margin: 0, fontWeight: 900}}>$1.000</p>
               <p>Last coins earned<br /> <small>KFC - store 408 8th ave</small></p>
               <br></br>
               <br></br>
@@ -101,10 +92,10 @@ const Dashboard: React.FC = () => {
           </Col>
           <Col xs={24} sm={24} md={24} lg={5} xl={5}>
             <Card
-              style={{ marginTop: 16, minHeight: 750 }}
+              style={{ marginTop: 16 }}
             >
               <p style={{padding: '6px', background: 'rgb(39 160 170)', borderRadius: '10px', textAlign: 'center', fontSize: '20px', color: 'white', width: 200}}>Coupons</p>
-              <p style={{fontSize: 40, margin: 0, fontWeight: 900}}>5</p>
+              <p style={{fontSize: 30, margin: 0, fontWeight: 900}}>5</p>
               <p>Last coupon used<br /> <small>KFC - store 408 8th ave</small></p>
               <br></br>
               <br></br>

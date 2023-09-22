@@ -69,7 +69,7 @@ export default class ChartTickets extends Component {
     render() {  
         return (  
             <div>  
-                <div id="SalesChart2" style={{ width: "100%", height: "290px" }}></div>  
+                <div id="SalesChart2" style={{ width: "100%", height: "192px" }}></div>  
             </div>  
         )  
     }  
