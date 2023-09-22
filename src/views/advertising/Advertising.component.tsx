@@ -1,13 +1,12 @@
 /* eslint-disable jsx-a11y/alt-text */
 import React from 'react';
-import './HotspotQR.scss';
+import './Advertising.scss';
 import { Content, Header } from 'antd/es/layout/layout';
 import MenuComponent from '../../components/menu/Menu.component';
 import { Breadcrumb, Button } from 'antd';
-import QRCodeReader from '../../components/qr-code-reader';
+import VideoPlayer from '../../components/video-player';
 
-const HotspotQR: React.FC = () => {
-  
+const Advertising: React.FC = () => {
   return (
     <React.Fragment>
       <Header>
@@ -45,22 +44,22 @@ const HotspotQR: React.FC = () => {
             padding: 24,
             minHeight: 600,
             width: '80%',
-            margin: '0 auto',
-            textAlign: 'center'
+            margin: '0 auto'
           }}
         >
           <Breadcrumb style={{ margin: '16px', fontSize: '30px', fontWeight: 900 }}>
-            <Breadcrumb.Item>Hotspot Scan</Breadcrumb.Item>
+            <Breadcrumb.Item>Advertising</Breadcrumb.Item>
           </Breadcrumb>
-          <div style={{width: '50%', height: 400, margin: '0 auto', maxHeight: 600}}>
-            <QRCodeReader />
+          <div className='video-player'>
+            <VideoPlayer />
+            <Button ghost disabled size={'large'} style={{marginTop: '2rem'}}>
+              Claim coin (disabled)
+            </Button>
           </div>
-          
-        </Content>
-         
+        </Content>         
       </div>      
     </React.Fragment>
   );
 };
 
-export default HotspotQR;
+export default Advertising;

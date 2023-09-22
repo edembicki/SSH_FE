@@ -1,0 +1,19 @@
+@import './../../assets/styles/global';
+
+.ant-form-item-row {
+  min-width: 400px !important;
+}
+
+.ant-form-item-control-input-content > *{
+  height: 40px !important;
+}
+
+.video-player {
+  text-align: center;
+}
+.video-player > div {
+  width: 100% !important;
+  height: 400px !important;
+  margin: 0 auto !important;
+  border-radius: 10px !important;
+}
