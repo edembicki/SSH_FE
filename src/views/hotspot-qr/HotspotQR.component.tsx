@@ -53,7 +53,7 @@ const HotspotQR: React.FC = () => {
           </Breadcrumb>
           <QRCode
             errorLevel="H"
-            size={400}
+            size={200}
             value="https://ant.design/"
             style={{margin: '0 auto'}}
           />
